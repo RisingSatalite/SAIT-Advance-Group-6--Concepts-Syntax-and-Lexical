@@ -1,9 +1,15 @@
+//Define varibles
 list = getlist
 total = 0
 item_count = 0
-average
+
+//The indent indicates a loop, and we will keep repeating the indented code until the loop is terminated
 foreach item in the list
     total += item
     item_count += 1
+
+//Calculate average
 average = total/item_count
+
+//Return Average
 return average
