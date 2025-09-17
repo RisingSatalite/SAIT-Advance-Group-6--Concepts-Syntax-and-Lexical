@@ -1,0 +1,6 @@
+When we have a set of numbers, we can add them together, and then divid by the number of items to get the average.
+
+Given [5,8,12,4,10]
+Total is 39
+There are 5 items
+Average is 39/5 = 7.8

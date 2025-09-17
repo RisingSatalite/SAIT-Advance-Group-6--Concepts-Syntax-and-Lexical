@@ -1,0 +1,9 @@
+list = getlist
+total = 0
+item_count = 0
+average
+foreach item in the list
+    total += item
+    item_count += 1
+average = total/item_count
+return average
