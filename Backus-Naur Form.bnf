@@ -6,6 +6,19 @@
 <number-list> ::= <number> | <number> "," <number-list>
 <number>     ::= <digit> { <digit> }
 
+
+
+(* Define addition expression*)
+<expression> ::= <term> | <expression> "+" <term>
+<term>       ::= <number>
+(* expression example
+    <expression>
+    → <expression> "+" <term>
+    → (<expression> "+" <term>) "+" <term>
+    → (<term> "+" <term>) "+" <term>
+*)
+
+
 (* This define that varibles can have letters and or numbers *)
 <variable>   ::= <letter> { <letter> | <digit> }
 <letter>     ::= "A" | ... | "Z" | "a" | ... | "z"
