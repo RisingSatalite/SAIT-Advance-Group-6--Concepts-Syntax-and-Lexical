@@ -17,6 +17,8 @@
     → (<expression> "+" <term>) "+" <term>
     → (<term> "+" <term>) "+" <term>
 *)
+(*Divid expression*)
+<divid expression> ::= <term> "/" <term>
 
 
 (* This define that varibles can have letters and or numbers *)
