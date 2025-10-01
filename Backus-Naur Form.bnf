@@ -12,6 +12,9 @@
 (*For loop*)
 <forloop> ::= "for" <number> "in" <number-set> ":" <addition>
 
+(*Divid and return*)
+<divd>
+
 (*Function/other operations*)
 
 (* Define addition expression*)
