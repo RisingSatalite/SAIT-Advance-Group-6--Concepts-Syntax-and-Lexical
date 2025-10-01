@@ -1,12 +1,18 @@
+(*Varibles*)
+
 (* Declares the list of number *)
 (* <variable> is the name *)
 (* <number-set> is the data *)
 <declaration> ::= "let" <variable> "=" <number-set> ";"
 <number-set> ::= "[" <number-list> "]"
 <number-list> ::= <number> | <number> "," <number-list>
-<number>     ::= <digit> { <digit> }
 
+(*Main operations*)
 
+(*For loop*)
+<forloop> ::= "for" <number> "in" <number-set> ":" <addition>
+
+(*Function/other operations*)
 
 (* Define addition expression*)
 <addition> ::= <term> | <addition> "+" <term>
@@ -20,8 +26,12 @@
 (*Divid expression*)
 <divid> ::= <term> "/" <term>
 
+(*Other declaration*)
 
-(* This define that varibles can have letters and or numbers *)
+(*A number is made of digits*)
+<number>     ::= <digit> { <digit> }
+
+(* This define that varibles names can have letters and or numbers *)
 <variable>   ::= <letter> { <letter> | <digit> }
 <letter>     ::= "A" | ... | "Z" | "a" | ... | "z"
 <digit>      ::= "0" | "1" | ... | "9"
