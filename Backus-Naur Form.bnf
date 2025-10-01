@@ -9,7 +9,7 @@
 
 
 (* Define addition expression*)
-<expression> ::= <term> | <expression> "+" <term>
+<addition> ::= <term> | <addition> "+" <term>
 <term>       ::= <number>
 (* expression example
     <expression>
@@ -18,7 +18,7 @@
     → (<term> "+" <term>) "+" <term>
 *)
 (*Divid expression*)
-<divid expression> ::= <term> "/" <term>
+<divid> ::= <term> "/" <term>
 
 
 (* This define that varibles can have letters and or numbers *)
