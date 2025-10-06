@@ -35,4 +35,4 @@
 <digit>      ::= "0" | "1" | ... | "9"
 
 (* What type of variable is the varible *)
-<type> ::= "int" | "float" | "double" | "string" | "bool"
+<type>          ::= "number" | "string" | "boolean"
