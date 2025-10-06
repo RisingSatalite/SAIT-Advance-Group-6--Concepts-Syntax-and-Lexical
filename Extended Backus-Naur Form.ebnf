@@ -11,8 +11,8 @@
 <addition> ::= <term> 
              | <addition> "+" <term>
 
-<term> ::= <number>
 <divid> ::= <term> "/" <term>
+<term> ::= <number>
 <number> ::= <digit> <digit>
 
 <variable> ::= <letter> | (<letter> <variable>)
