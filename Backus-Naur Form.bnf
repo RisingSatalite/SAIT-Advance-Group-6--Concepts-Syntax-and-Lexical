@@ -1,30 +1,32 @@
-(* Declares the list of number *)
-(* <variable> is the name *)
-(* <number-set> is the data *)
-<declaration> ::= "let" <variable> "=" <number-set> ";"
-<number-set> ::= "[" <number-list> "]"
-<number-list> ::= <number> | <number> "," <number-list>
-<number>     ::= <digit> { <digit> }
+<program> ::= <statement> | <statement> <program>
+<statement> ::= <declaration> | <forloop> | <addition> | <divid>
+<declaration> ::= "let" <space> <variable> <space> "=" <space> <numberset> ";"
 
+<numberset> ::= "[" <space> <numberlist> <space> "]"
+<numberlist> ::= <number> 
+               | <number> <space> "," <space> <numberlist>
 
+<assignment> ::= <variable> <space> "=" <space> <addition> ";"
+<forloop> ::= "for" <space> <variable> <space> "in" <space> <variable> <space> ":" <space> <assignment>
 
-(* Define addition expression*)
-<addition> ::= <term> | <addition> "+" <term>
-<term>       ::= <number>
-(* expression example
-    <expression>
-    → <expression> "+" <term>
-    → (<expression> "+" <term>) "+" <term>
-    → (<term> "+" <term>) "+" <term>
-*)
-(*Divid expression*)
-<divid> ::= <term> "/" <term>
+<addition> ::= <term> 
+             | <addition> <space> "+" <space> <term>
 
+<term> ::= <number>
+<divid> ::= <term> <space> "/" <space> <term>
+<number> ::= <digit> <digit>
 
-(* This define that varibles can have letters and or numbers *)
-<variable>   ::= <letter> { <letter> | <digit> }
-<letter>     ::= "A" | ... | "Z" | "a" | ... | "z"
-<digit>      ::= "0" | "1" | ... | "9"
+<variable> ::= <letter> | <letter> <variable>
 
-(* What type of variable is the varible *)
-<type>          ::= "number" | "string" | "boolean"
+<letter> ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J"
+            | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T"
+            | "U" | "V" | "W" | "X" | "Y" | "Z"
+            | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j"
+            | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t"
+            | "u" | "v" | "w" | "x" | "y" | "z"
+
+<digit> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+
+<type> ::= "number" | "string" | "boolean"
+
+<space> ::= " "
