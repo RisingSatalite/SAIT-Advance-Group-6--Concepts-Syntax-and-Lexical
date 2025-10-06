@@ -1,0 +1,24 @@
+<program> ::= <statement> | <statement> <program>
+<statement> ::= <declaration> | <forloop> | <addition> | <divid>
+<declaration> ::= "let" <variable> "=" <numberset> ";"
+
+<numberset> ::= "[" <numberlist> "]"
+<numberlist> ::= <number> | (<number> "," <numberlist>)
+
+<assignment> ::= <variable> "=" <addition> ";"
+<forloop> ::= "for" <variable> "in" <variable> ":" <assignment>
+
+<addition> ::= <term> 
+             | <addition> "+" <term>
+
+<term> ::= <number>
+<divid> ::= <term> "/" <term>
+<number> ::= <digit> <digit>
+
+<variable> ::= <letter> | (<letter> <variable>)
+
+<letter> ::= "A" | "B" | ... | "Z" | "a" | ... | "y" | "z"
+
+<digit> ::= "0" | "1" | ... | "8" | "9"
+
+<type> ::= "number" | "string" | "boolean"
