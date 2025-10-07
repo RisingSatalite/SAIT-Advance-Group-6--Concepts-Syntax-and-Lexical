@@ -2,14 +2,16 @@
 <statement> ::= <declaration> | <forloop> | <addition>
 <declaration> ::= "let" <variable> "=" <numberset> ";"
 
-<numberset> ::= "[" <numberlist> "]"
-<numberlist> ::= <number> 
-               | <number> "," <numberlist>
 
 <assignment> ::= <variable> "=" <addition> ";"
 <count> ::= <variable> "=" <addition> ";"
 <forloop> ::= "for" <variable> "in" <numberlist> ":" <assignment> <count>
 return_stmt ::= "return" [ assignment "/" <count ]
+
+
+<numberset> ::= "[" <numberlist> "]"
+<numberlist> ::= <number> 
+               | <number> "," <numberlist>
 
 
 <addition> ::= <term> 
