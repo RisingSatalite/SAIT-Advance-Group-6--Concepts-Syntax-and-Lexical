@@ -18,7 +18,7 @@ return_stmt ::= "return" [ assignment "/" <count ]
              | <addition> "+" <term>
 
 <term> ::= <number>
-<number> ::= <digit> <digit>
+<number> ::= <digit> | <digit> <number>
 
 <variable> ::= <letter> | <letter> <variable>
 
