@@ -1,21 +1,22 @@
 <program> ::= <statement> | <statement> <program>
-<statement> ::= <declaration> | <forloop> | <addition> | <divid>
+<statement> ::= <declaration> | <forloop> | <addition>
 <declaration> ::= "let" <variable> "=" <numberset> ";"
 
 <numberset> ::= "[" <numberlist> "]"
-<numberlist> ::= <number> | (<number> "," <numberlist>)
+<numberlist> ::= <number> | {<number> "," <numberlist>}
 
 <assignment> ::= <variable> "=" <addition> ";"
-<forloop> ::= "for" <variable> "in" <variable> ":" <assignment>
+<count> ::= <variable> "=" <addition> ";"
+<forloop> ::= "for" <variable> "in" <numberlist> ":" <assignment> <count>
+return_stmt ::= "return" [ assignment "/" <count ]
 
 <addition> ::= <term> 
              | <addition> "+" <term>
 
-<divid> ::= <term> "/" <term>
 <term> ::= <number>
 <number> ::= <digit> <digit>
 
-<variable> ::= <letter> | (<letter> <variable>)
+<variable> ::= <letter> | {<letter> <variable>}
 
 <letter> ::= "A" | "B" | ... | "Z" | "a" | ... | "y" | "z"
 
